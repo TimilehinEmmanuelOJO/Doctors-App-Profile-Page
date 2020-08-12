@@ -66,11 +66,11 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 Container(
                   width: 450,
-                  height: 683,
+                  height: 690,
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(248, 248, 248, 100),
                     borderRadius: BorderRadius.only(
@@ -92,7 +92,7 @@ class MyApp extends StatelessWidget {
                             width: 375,
                             height: 200,
                             decoration: BoxDecoration(
-                              color: Color.fromRGBO(255, 203, 209, 100),
+                              color: Color.fromRGBO(255, 255, 255, 100),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(20),
                               ),
@@ -107,27 +107,128 @@ class MyApp extends StatelessWidget {
                               radius: 20,
                             ),
                           ),
-                          Column(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 70,
-                              ),
-                              Text('timi ojo',
-                              style: TextStyle(
-                                color: Colors.red
-                              ),
-                              ),
-                              Text('Gyneacologist',
-                                style: TextStyle(
-                                    color: Colors.red
+                          Positioned(
+                            top: -18,
+                            left: 125,
+                            child: Column(
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 70,
                                 ),
-                              ),
-                              Text('✦✦✦✦✦',
+                                Text('John Doe',
                                 style: TextStyle(
-                                    color: Colors.red
+                                    color: Color.fromRGBO(15, 11, 0, 100),
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold
                                 ),
-                              ),
-                            ],
+                                ),
+                                Text('Gyneacologist',
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(15, 11, 0, 100),
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                                Text('✦✦✦✦✦',
+                                  style: TextStyle(color: Color.fromRGBO(255, 138, 0, 100),
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            top: 130,
+                            left: 30,
+                            right: 20,
+                            bottom: 5,
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  width: 100,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(246, 255, 250, 100),
+                                    border:Border.all(color: Color.fromRGBO(127, 215, 165, 100)),
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(40),
+                                    ),
+                                  ),
+                                  child: Row(
+                                    children: <Widget>[
+                                      SizedBox(width: 15,),
+                                      Icon(Icons.phone,
+                                      color: Color.fromRGBO(35, 183, 98, 100),),
+                                      SizedBox(width: 17,),
+                                      Text('\$25',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(35, 183, 98, 100),
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold
+                                      ),)
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Container(
+                                  width: 100,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(255, 251, 246, 100),
+                                    border:Border.all(color: Color.fromRGBO(254, 174, 38, 100)),
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(40),
+                                    ),
+                                  ),
+                                  child: Row(
+                                    children: <Widget>[
+                                      SizedBox(width: 15,),
+                                      Image(image:AssetImage('image/internet.png'),
+                                        color: Color.fromRGBO(255, 138, 0, 100),
+                                      width: 22,),
+                                      SizedBox(width: 17,),
+                                      Text('\$25',
+                                        style: TextStyle(
+                                            color: Color.fromRGBO(255, 138, 0, 100),
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold
+                                        ),),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Container(
+                                  width: 100,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(255, 249, 250, 100),
+                                    border:Border.all(color: Color.fromRGBO(248, 191, 200, 100)),
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(40),
+                                    ),
+                                  ),
+                                  child: Row(
+                                    children: <Widget>[
+                                      SizedBox(width: 15,),
+                                      Icon(Icons.directions_walk,
+                                        color: Color.fromRGBO(239, 106, 127, 100),),
+                                      SizedBox(width: 17,),
+                                      Text('\$25',
+                                        style: TextStyle(
+                                            color: Color.fromRGBO(239, 106, 127, 100),
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold
+                                        ),),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
