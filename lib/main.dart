@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:humanitarian_icons/humanitarian_icons.dart';
@@ -18,6 +19,8 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: Container(
+            width: 450,
+            height: 700,
             color: Color.fromRGBO(212, 232, 228, 100),
             child: Column(
               children: <Widget>[
@@ -58,15 +61,15 @@ class MyApp extends StatelessWidget {
                       width: 130,
                     ),
                     Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(255, 255, 255, 100),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(255, 255, 255, 100),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
                         ),
-                      ),
-                      child: Icon(Icons.edit)
+                        child: Icon(Icons.edit)
                     ),
                   ],
                 ),
@@ -75,7 +78,7 @@ class MyApp extends StatelessWidget {
                 ),
                 Container(
                   width: 450,
-                  height: 690,
+                  height: 670,
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(248, 248, 248, 100),
                     borderRadius: BorderRadius.only(
@@ -85,17 +88,14 @@ class MyApp extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       SizedBox(
-                        height: 50,
+                        height: 40,
                       ),
                       Stack(
                         overflow: Overflow.visible,
                         children: <Widget>[
-                          SizedBox(
-                            height: 10,
-                          ),
                           Container(
                             width: 375,
-                            height: 200,
+                            height: 180,
                             decoration: BoxDecoration(
                               color: Color.fromRGBO(255, 255, 255, 100),
                               borderRadius: BorderRadius.all(
@@ -118,14 +118,14 @@ class MyApp extends StatelessWidget {
                             child: Column(
                               children: <Widget>[
                                 SizedBox(
-                                  height: 70,
+                                  height: 50,
                                 ),
                                 Text('John Doe',
-                                style: TextStyle(
-                                    color: Color.fromRGBO(15, 11, 0, 100),
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold
-                                ),
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(15, 11, 0, 100),
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold
+                                  ),
                                 ),
                                 Text('Gyneacologist',
                                   style: TextStyle(
@@ -136,7 +136,7 @@ class MyApp extends StatelessWidget {
                                 ),
                                 Text('✦✦✦✦✦',
                                   style: TextStyle(color: Color.fromRGBO(255, 138, 0, 100),
-                                      fontSize: 20,
+                                      fontSize: 25,
                                       fontWeight: FontWeight.bold
                                   ),
                                 ),
@@ -164,14 +164,14 @@ class MyApp extends StatelessWidget {
                                     children: <Widget>[
                                       SizedBox(width: 15,),
                                       Icon(Icons.phone,
-                                      color: Color.fromRGBO(35, 183, 98, 100),),
+                                        color: Color.fromRGBO(35, 183, 98, 100),),
                                       SizedBox(width: 17,),
                                       Text('\$25',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(35, 183, 98, 100),
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold
-                                      ),)
+                                        style: TextStyle(
+                                            color: Color.fromRGBO(35, 183, 98, 100),
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold
+                                        ),)
                                     ],
                                   ),
                                 ),
@@ -191,15 +191,15 @@ class MyApp extends StatelessWidget {
                                   child: Row(
                                     children: <Widget>[
                                       SizedBox(width: 15,),
-                                      Image(image:AssetImage('image/internet.png'),
+                                      Icon(MdiIcons.circle,
                                         color: Color.fromRGBO(255, 138, 0, 100),
-                                      width: 22,),
+                                      ),
                                       SizedBox(width: 17,),
                                       Text('\$25',
                                         style: TextStyle(
                                             color: Color.fromRGBO(255, 138, 0, 100),
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold
                                         ),),
                                     ],
                                   ),
@@ -241,53 +241,53 @@ class MyApp extends StatelessWidget {
                         height: 10,
                       ),
                       Container(
-                        height: 145,
+                        height: 130,
                         width: 375,
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 255, 255, 100),
-                          borderRadius: BorderRadius.all(Radius.circular(20))
+                            color: Color.fromRGBO(255, 255, 255, 100),
+                            borderRadius: BorderRadius.all(Radius.circular(20))
                         ),
                         child:  Column(
                           children: <Widget>[
                             SizedBox(
-                              height: 7,
+                              height: 5,
                             ),
                             Container(
-                              height: 68,
+                              height: 60,
                               width: 375,
                               decoration: BoxDecoration(
-                                  color: Color.fromRGBO(255, 255, 255, 100),
+                                color: Color.fromRGBO(255, 255, 255, 100),
                               ),
                               child: Row(
                                 children: <Widget>[SizedBox(width: 20,),
                                   Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: Color.fromRGBO(240, 153, 89, 100),
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(10),
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      color: Color.fromRGBO(240, 153, 89, 100),
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10),
+                                      ),
+                                    ),
+                                    child: Icon(MdiIcons.medicalBag,
+                                      color: Colors.white,
                                     ),
                                   ),
-                                  child: Icon(MdiIcons.medicalBag,
-                                    color: Colors.white,
-                                  ),
-                                ),
                                   SizedBox(width: 20,),
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[SizedBox(height: 12,),
                                       Text('CIMS Hospital, Ahmedabad',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                        color: Color.fromRGBO(0, 0, 0, 10)
-                                      ),),
-                                      SizedBox(height: 5,),
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                            color: Color.fromRGBO(0, 0, 0, 10)
+                                        ),),
+                                      SizedBox(height: 3,),
                                       Text('11:30AM - 02:00PM',
                                         style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 15,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15,
                                             color: Color.fromRGBO(0, 0, 50, 100)
                                         ),),
                                     ],
@@ -296,10 +296,10 @@ class MyApp extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              height: 68,
+                              height: 60,
                               width: 375,
                               decoration: BoxDecoration(
-                                  color: Color.fromRGBO(255, 255, 255, 100),
+                                color: Color.fromRGBO(255, 255, 255, 100),
                               ),
                               child: Row(
                                 children: <Widget>[SizedBox(width: 20,),
@@ -323,15 +323,15 @@ class MyApp extends StatelessWidget {
                                     children: <Widget>[SizedBox(height: 12,),
                                       Text('Zydus Hospital, Ahmedabad',
                                         style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
                                             color: Color.fromRGBO(0, 0, 0, 10)
                                         ),),
-                                      SizedBox(height: 5,),
+                                      SizedBox(height: 3,),
                                       Text('02:30AM - 07:00PM',
                                         style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 15,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15,
                                             color: Color.fromRGBO(0, 0, 50, 100)
                                         ),),
                                     ],
@@ -343,10 +343,10 @@ class MyApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 8,
                       ),
                       Container(
-                        height: 60,
+                        height: 55,
                         width: 375,
                         decoration: BoxDecoration(
                           color: Color.fromRGBO(255, 255, 255, 100),
@@ -375,14 +375,14 @@ class MyApp extends StatelessWidget {
                             SizedBox(width: 20,),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[SizedBox(height: 10,),
+                              children: <Widget>[SizedBox(height: 8,),
                                 Text('Education',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
                                       color: Color.fromRGBO(0, 0, 0, 10)
                                   ),),
-                                SizedBox(height: 5,),
+                                SizedBox(height: 3,),
                                 Text('MBBS, MABS MD',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
@@ -394,9 +394,9 @@ class MyApp extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(height: 8,),
                       Container(
-                        height: 130,
+                        height: 60,
                         width: 375,
                         decoration: BoxDecoration(
                           color: Color.fromRGBO(255, 255, 255, 100),
@@ -432,10 +432,9 @@ class MyApp extends StatelessWidget {
                                       fontSize: 18,
                                       color: Color.fromRGBO(0, 0, 0, 10)
                                   ),),
-                                SizedBox(height: 5,),
-                                Text('In publishing and graphic design, \n'
-                                    'Lorem ipsum is a placeholder text \ncommonly used to demonstrate the visual '
-                                    '\nform of a document or a typeface \nwithout relying on meaningful content.',
+                                SizedBox(height: 3,),
+                                Text('In publishing and graphic design'
+                                  ,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15,
@@ -446,14 +445,21 @@ class MyApp extends StatelessWidget {
                           ],
                         ),
                       ),
-                   Center(
-                   ),
                     ],
                   ),
                 ),
               ],
             ),
           ),
+        ),
+        bottomNavigationBar: CurvedNavigationBar(
+          color: Colors.black,
+          items: <Widget>[
+            Icon(CupertinoIcons.time, color: Colors.white,),
+            Icon(CupertinoIcons.time),
+            Icon(CupertinoIcons.time),
+            Icon(CupertinoIcons.time)
+          ],
         ),
       ),
     );
