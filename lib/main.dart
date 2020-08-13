@@ -2,6 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:humanitarian_icons/humanitarian_icons.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:profilepage_doc_app/tim_icons_icons.dart';
+import 'package:material_design_icons_flutter/icon_map.dart';
 
 void main() {
   runApp(MyApp());
@@ -62,6 +66,7 @@ class MyApp extends StatelessWidget {
                           Radius.circular(10),
                         ),
                       ),
+                      child: Icon(Icons.edit)
                     ),
                   ],
                 ),
@@ -236,7 +241,7 @@ class MyApp extends StatelessWidget {
                         height: 10,
                       ),
                       Container(
-                        height: 150,
+                        height: 145,
                         width: 375,
                         decoration: BoxDecoration(
                           color: Color.fromRGBO(255, 255, 255, 100),
@@ -264,9 +269,8 @@ class MyApp extends StatelessWidget {
                                       Radius.circular(10),
                                     ),
                                   ),
-                                  child: Icon(
-                                    Icons.local_hospital,
-                                    color: Color.fromRGBO(0, 0, 41, 10),
+                                  child: Icon(MdiIcons.medicalBag,
+                                    color: Colors.white,
                                   ),
                                 ),
                                   SizedBox(width: 20,),
@@ -308,10 +312,9 @@ class MyApp extends StatelessWidget {
                                         Radius.circular(10),
                                       ),
                                     ),
-                                    child: Image(
-                                      image: NetworkImage('https://image.flaticon.com/icons/svg/25/25296.svg'),
-                                      width: 5,
-                                      color: Color.fromRGBO(0, 0, 0, 10),
+                                    child: Icon(MdiIcons.medicalBag,
+                                      size: 25,
+                                      color: Colors.white,
                                     ),
                                   ),
                                   SizedBox(width: 20,),
@@ -339,6 +342,112 @@ class MyApp extends StatelessWidget {
                           ],
                         ),
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        height: 60,
+                        width: 375,
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(255, 255, 255, 100),
+                        ),
+                        child: Row(
+                          children: <Widget>[SizedBox(width: 10,),
+                            Column(
+                              children: <Widget>[SizedBox(height: 10,),
+                                Container(
+                                  width: 20,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(240, 153, 89, 100),
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(5),
+                                    ),
+                                  ),
+                                  child: Icon(
+                                    MdiIcons.book,
+                                    size: 10,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(width: 20,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[SizedBox(height: 10,),
+                                Text('Education',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Color.fromRGBO(0, 0, 0, 10)
+                                  ),),
+                                SizedBox(height: 5,),
+                                Text('MBBS, MABS MD',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15,
+                                      color: Color.fromRGBO(0, 0, 50, 100)
+                                  ),),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 10,),
+                      Container(
+                        height: 130,
+                        width: 375,
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(255, 255, 255, 100),
+                        ),
+                        child: Row(
+                          children: <Widget>[SizedBox(width: 10,),
+                            Column(
+                              children: <Widget>[SizedBox(height: 10,),
+                                Container(
+                                  width: 20,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(240, 153, 89, 100),
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(5),
+                                    ),
+                                  ),
+                                  child: Icon(
+                                    MdiIcons.tie,
+                                    size: 15,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(width: 20,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[SizedBox(height: 10,),
+                                Text('Description',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Color.fromRGBO(0, 0, 0, 10)
+                                  ),),
+                                SizedBox(height: 5,),
+                                Text('In publishing and graphic design, \n'
+                                    'Lorem ipsum is a placeholder text \ncommonly used to demonstrate the visual '
+                                    '\nform of a document or a typeface \nwithout relying on meaningful content.',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15,
+                                      color: Color.fromRGBO(0, 0, 50, 100)
+                                  ),),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                   Center(
+                   ),
                     ],
                   ),
                 ),
