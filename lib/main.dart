@@ -142,7 +142,7 @@ class MyApp extends StatelessWidget {
                             top: 130,
                             left: 30,
                             right: 20,
-                            bottom: 5,
+                            bottom: 0,
                             child: Row(
                               children: <Widget>[
                                 Container(
@@ -231,6 +231,113 @@ class MyApp extends StatelessWidget {
                             ),
                           ),
                         ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        height: 150,
+                        width: 375,
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(255, 255, 255, 100),
+                          borderRadius: BorderRadius.all(Radius.circular(20))
+                        ),
+                        child:  Column(
+                          children: <Widget>[
+                            SizedBox(
+                              height: 7,
+                            ),
+                            Container(
+                              height: 68,
+                              width: 375,
+                              decoration: BoxDecoration(
+                                  color: Color.fromRGBO(255, 255, 255, 100),
+                              ),
+                              child: Row(
+                                children: <Widget>[SizedBox(width: 20,),
+                                  Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(240, 153, 89, 100),
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(10),
+                                    ),
+                                  ),
+                                  child: Icon(
+                                    Icons.local_hospital,
+                                    color: Color.fromRGBO(0, 0, 41, 10),
+                                  ),
+                                ),
+                                  SizedBox(width: 20,),
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[SizedBox(height: 12,),
+                                      Text('CIMS Hospital, Ahmedabad',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                        color: Color.fromRGBO(0, 0, 0, 10)
+                                      ),),
+                                      SizedBox(height: 5,),
+                                      Text('11:30AM - 02:00PM',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15,
+                                            color: Color.fromRGBO(0, 0, 50, 100)
+                                        ),),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              height: 68,
+                              width: 375,
+                              decoration: BoxDecoration(
+                                  color: Color.fromRGBO(255, 255, 255, 100),
+                              ),
+                              child: Row(
+                                children: <Widget>[SizedBox(width: 20,),
+                                  Container(
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      color: Color.fromRGBO(166, 170, 209, 100),
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10),
+                                      ),
+                                    ),
+                                    child: Image(
+                                      image: NetworkImage('https://image.flaticon.com/icons/svg/25/25296.svg'),
+                                      width: 5,
+                                      color: Color.fromRGBO(0, 0, 0, 10),
+                                    ),
+                                  ),
+                                  SizedBox(width: 20,),
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[SizedBox(height: 12,),
+                                      Text('Zydus Hospital, Ahmedabad',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                            color: Color.fromRGBO(0, 0, 0, 10)
+                                        ),),
+                                      SizedBox(height: 5,),
+                                      Text('02:30AM - 07:00PM',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15,
+                                            color: Color.fromRGBO(0, 0, 50, 100)
+                                        ),),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
