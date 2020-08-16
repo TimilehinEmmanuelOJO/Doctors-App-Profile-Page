@@ -403,7 +403,7 @@ class MyApp extends StatelessWidget {
                         ),
                         SizedBox(height: 15,),
                         Container(
-                          height: 115,
+                          height: 130,
                           width: 375,
                           decoration: BoxDecoration(
                             color: Color.fromRGBO(255, 255, 255, 100),
@@ -442,9 +442,9 @@ class MyApp extends StatelessWidget {
                                         fontSize: 18,
                                         color: Color.fromRGBO(0, 0, 0, 10)
                                     ),),
-                                  SizedBox(height: 3,),
+                                  SizedBox(height: 5,),
                                   Text('In publishing and graphic design Lorem \nipsum is a placeholder text commonly'
-                                      ' \nused to demonstrate the visual form of \n'
+                                      ' \nused to demonstrate the visual form of \n a document or a typeface without relying \non meaningful content'
                                       ,
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -465,6 +465,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         bottomNavigationBar: CurvedNavigationBar(
+          height: 50,
           color: Colors.white,
           items: <Widget>[
             Icon(HumanitarianIcons.calendar, color: Colors.black, size: 30,),
