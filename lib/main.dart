@@ -7,12 +7,31 @@ import 'package:humanitarian_icons/humanitarian_icons.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:profilepage_doc_app/tim_icons_icons.dart';
 import 'package:material_design_icons_flutter/icon_map.dart';
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+var _bottomNavIndex = 0;
+
+AnimationController _animationController;
+Animation<double> animation;
+CurvedAnimation curve;
+
+  final iconList = <IconData>[
+    Icons.brightness_1,
+    Icons.brightness_3,
+    Icons.brightness_5,
+    Icons.brightness_7,
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -45,7 +64,7 @@ class MyApp extends StatelessWidget {
                         ),
                         child: Icon(
                           Icons.settings,
-                          color: Color.fromRGBO(24, 8, 41, 100),
+                          color: Color.fromRGBO(0, 0, 0, 1),
                         ),
                       ),
                       SizedBox(
@@ -71,7 +90,8 @@ class MyApp extends StatelessWidget {
                               Radius.circular(10),
                             ),
                           ),
-                          child: Icon(Icons.edit)
+                          child: Icon(Icons.edit,
+                          color: Color.fromRGBO(0, 0, 0, 1),),
                       ),
                     ],
                   ),
@@ -125,20 +145,20 @@ class MyApp extends StatelessWidget {
                                   ),
                                   Text('John Doe',
                                     style: TextStyle(
-                                        color: Color.fromRGBO(15, 11, 0, 100),
+                                        color: Color.fromRGBO(0, 0, 0, 1),
                                         fontSize: 30,
                                         fontWeight: FontWeight.bold
                                     ),
                                   ),
                                   Text('Gyneacologist',
                                     style: TextStyle(
-                                        color: Color.fromRGBO(15, 11, 0, 100),
+                                        color: Color.fromRGBO(0, 0, 0, 1),
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold
                                     ),
                                   ),
                                   Text('✦✦✦✦✦',
-                                    style: TextStyle(color: Color.fromRGBO(255, 138, 0, 100),
+                                    style: TextStyle(color: Color.fromRGBO(255, 138, 0, 1),
                                         fontSize: 25,
                                         fontWeight: FontWeight.bold
                                     ),
@@ -157,21 +177,21 @@ class MyApp extends StatelessWidget {
                                     width: 100,
                                     height: 40,
                                     decoration: BoxDecoration(
-                                      color: Color.fromRGBO(246, 255, 250, 100),
-                                      border:Border.all(color: Color.fromRGBO(127, 215, 165, 100)),
+                                      color: Color.fromRGBO(246, 255, 250, 1),
+                                      border:Border.all(color: Color.fromRGBO(35, 183, 98, 1)),
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(40),
                                       ),
                                     ),
                                     child: Row(
                                       children: <Widget>[
-                                        SizedBox(width: 15,),
+                                        SizedBox(width: 20,),
                                         Icon(Icons.phone,
-                                          color: Color.fromRGBO(35, 183, 98, 100),),
-                                        SizedBox(width: 17,),
+                                          color: Color.fromRGBO(35, 183, 98, 1),),
+                                        SizedBox(width: 7,),
                                         Text('\$25',
                                           style: TextStyle(
-                                              color: Color.fromRGBO(35, 183, 98, 100),
+                                              color: Color.fromRGBO(35, 183, 98, 1),
                                               fontSize: 20,
                                               fontWeight: FontWeight.bold
                                           ),)
@@ -186,21 +206,21 @@ class MyApp extends StatelessWidget {
                                     height: 40,
                                     decoration: BoxDecoration(
                                       color: Color.fromRGBO(255, 251, 246, 100),
-                                      border:Border.all(color: Color.fromRGBO(254, 174, 38, 100)),
+                                      border:Border.all(color: Color.fromRGBO(254, 174, 38, 1)),
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(40),
                                       ),
                                     ),
                                     child: Row(
                                       children: <Widget>[
-                                        SizedBox(width: 15,),
+                                        SizedBox(width: 20,),
                                         Icon(MdiIcons.circle,
-                                          color: Color.fromRGBO(255, 138, 0, 100),
+                                          color: Color.fromRGBO(255, 138, 0, 1),
                                         ),
-                                        SizedBox(width: 17,),
+                                        SizedBox(width: 7,),
                                         Text('\$25',
                                           style: TextStyle(
-                                              color: Color.fromRGBO(255, 138, 0, 100),
+                                              color: Color.fromRGBO(255, 138, 0, 1),
                                               fontSize: 20,
                                               fontWeight: FontWeight.bold
                                           ),),
@@ -215,20 +235,20 @@ class MyApp extends StatelessWidget {
                                     height: 40,
                                     decoration: BoxDecoration(
                                       color: Color.fromRGBO(255, 249, 250, 100),
-                                      border:Border.all(color: Color.fromRGBO(248, 191, 200, 100)),
+                                      border:Border.all(color: Color.fromRGBO(248, 191, 200, 1)),
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(40),
                                       ),
                                     ),
                                     child: Row(
                                       children: <Widget>[
-                                        SizedBox(width: 15,),
+                                        SizedBox(width: 20,),
                                         Icon(Icons.directions_walk,
-                                          color: Color.fromRGBO(239, 106, 127, 100),),
-                                        SizedBox(width: 17,),
+                                          color: Color.fromRGBO(239, 106, 127, 1),),
+                                        SizedBox(width: 7,),
                                         Text('\$25',
                                           style: TextStyle(
-                                              color: Color.fromRGBO(239, 106, 127, 100),
+                                              color: Color.fromRGBO(239, 106, 127, 1),
                                               fontSize: 20,
                                               fontWeight: FontWeight.bold
                                           ),),
@@ -260,6 +280,7 @@ class MyApp extends StatelessWidget {
                                 width: 375,
                                 decoration: BoxDecoration(
                                   color: Color.fromRGBO(255, 255, 255, 100),
+                                    borderRadius: BorderRadius.all(Radius.circular(20))
                                 ),
                                 child: Row(
                                   children: <Widget>[SizedBox(width: 20,),
@@ -267,7 +288,7 @@ class MyApp extends StatelessWidget {
                                       width: 40,
                                       height: 40,
                                       decoration: BoxDecoration(
-                                        color: Color.fromRGBO(240, 153, 89, 100),
+                                        color: Color.fromRGBO(240, 153, 89, 1),
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(10),
                                         ),
@@ -284,7 +305,7 @@ class MyApp extends StatelessWidget {
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 18,
-                                              color: Color.fromRGBO(0, 0, 0, 10)
+                                              color: Color.fromRGBO(0, 0, 0, 1)
                                           ),),
                                         SizedBox(height: 5,),
                                         Text('11:30AM - 02:00PM',
@@ -304,6 +325,7 @@ class MyApp extends StatelessWidget {
                                 width: 375,
                                 decoration: BoxDecoration(
                                   color: Color.fromRGBO(255, 255, 255, 100),
+                                    borderRadius: BorderRadius.all(Radius.circular(20))
                                 ),
                                 child: Row(
                                   children: <Widget>[SizedBox(width: 20,),
@@ -311,7 +333,7 @@ class MyApp extends StatelessWidget {
                                       width: 40,
                                       height: 40,
                                       decoration: BoxDecoration(
-                                        color: Color.fromRGBO(166, 170, 209, 100),
+                                        color: Color.fromRGBO(166, 170, 209, 1),
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(10),
                                         ),
@@ -329,7 +351,7 @@ class MyApp extends StatelessWidget {
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 18,
-                                              color: Color.fromRGBO(0, 0, 0, 10)
+                                              color: Color.fromRGBO(0, 0, 0, 1)
                                           ),),
                                         SizedBox(height: 5,),
                                         Text('02:30AM - 07:00PM',
@@ -359,14 +381,14 @@ class MyApp extends StatelessWidget {
                             ),
                           ),
                           child: Row(
-                            children: <Widget>[SizedBox(width: 10,),
+                            children: <Widget>[SizedBox(width: 20,),
                               Column(
                                 children: <Widget>[SizedBox(height: 10,),
                                   Container(
                                     width: 20,
                                     height: 20,
                                     decoration: BoxDecoration(
-                                      color: Color.fromRGBO(240, 153, 89, 100),
+                                      color: Color.fromRGBO(240, 153, 89, 1),
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(5),
                                       ),
@@ -387,7 +409,7 @@ class MyApp extends StatelessWidget {
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 18,
-                                        color: Color.fromRGBO(0, 0, 0, 10)
+                                        color: Color.fromRGBO(0, 0, 0, 1)
                                     ),),
                                   SizedBox(height: 5,),
                                   Text('MBBS, MABS MD',
@@ -412,14 +434,14 @@ class MyApp extends StatelessWidget {
                             ),
                           ),
                           child: Row(
-                            children: <Widget>[SizedBox(width: 10,),
+                            children: <Widget>[SizedBox(width: 20,),
                               Column(
                                 children: <Widget>[SizedBox(height: 10,),
                                   Container(
                                     width: 20,
                                     height: 20,
                                     decoration: BoxDecoration(
-                                      color: Color.fromRGBO(239, 106, 127, 100),
+                                      color: Color.fromRGBO(239, 106, 127, 1),
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(5),
                                       ),
@@ -440,11 +462,11 @@ class MyApp extends StatelessWidget {
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 18,
-                                        color: Color.fromRGBO(0, 0, 0, 10)
+                                        color: Color.fromRGBO(0, 0, 0, 1)
                                     ),),
                                   SizedBox(height: 5,),
                                   Text('In publishing and graphic design Lorem \nipsum is a placeholder text commonly'
-                                      ' \nused to demonstrate the visual form of \n a document or a typeface without relying \non meaningful content'
+                                      '\nused to demonstrate the visual form of \na document or a typeface without relying \non meaningful content'
                                       ,
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -464,16 +486,20 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: CurvedNavigationBar(
-          height: 50,
-          color: Colors.white,
-          items: <Widget>[
-            Icon(HumanitarianIcons.calendar, color: Colors.black, size: 30,),
-            Icon(MdiIcons.circleOutline, color: Colors.black, size: 30,),
-            Icon(MdiIcons.alarm,color: Colors.black, size: 30),
-            Icon(CupertinoIcons.person_solid, color: Colors.black, size: 30),
-          ],
-        ),
+        floatingActionButton: FloatingActionButton( onPressed: () {},
+      ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: AnimatedBottomNavigationBar(
+            icons: iconList,
+          activeIndex: _bottomNavIndex,
+          gapLocation: GapLocation.center,
+          notchSmoothness: NotchSmoothness.verySmoothEdge,
+          notchAndCornersAnimation: animation,
+          splashSpeedInMilliseconds: 300,
+          leftCornerRadius: 30,
+          rightCornerRadius: 30,
+          onTap: (index) => setState(() => _bottomNavIndex = index),
+      ),
       ),
     );
   }
