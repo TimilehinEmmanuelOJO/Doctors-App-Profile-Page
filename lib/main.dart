@@ -486,20 +486,18 @@ CurvedAnimation curve;
             ),
           ),
         ),
-        floatingActionButton: FloatingActionButton( onPressed: () {},
-      ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        bottomNavigationBar: AnimatedBottomNavigationBar(
-            icons: iconList,
-          activeIndex: _bottomNavIndex,
-          gapLocation: GapLocation.center,
-          notchSmoothness: NotchSmoothness.verySmoothEdge,
-          notchAndCornersAnimation: animation,
-          splashSpeedInMilliseconds: 300,
-          leftCornerRadius: 30,
-          rightCornerRadius: 30,
-          onTap: (index) => setState(() => _bottomNavIndex = index),
-      ),
+        bottomNavigationBar: CurvedNavigationBar(
+          height: 50,
+          color: Colors.white,
+          backgroundColor: Color.fromRGBO(248, 248, 248, 100) ,
+          buttonBackgroundColor: Color.fromRGBO(248, 248, 248, 100),
+          items: <Widget>[
+            Icon(HumanitarianIcons.calendar, color: Colors.black, size: 30,),
+            Icon(MdiIcons.circleOutline, color: Colors.black, size: 30,),
+            Icon(MdiIcons.alarm,color: Colors.black, size: 30),
+            Icon(CupertinoIcons.person_solid, color: Colors.black, size: 30),
+          ],
+        ),
       ),
     );
   }
