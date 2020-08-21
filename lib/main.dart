@@ -123,6 +123,7 @@ class _MyAppState extends State<MyApp> {
                               right: 100,
                               left: 100,
                               child: CircleAvatar(
+                                backgroundColor: Colors.lightBlue.shade300,
                                 radius: 20,
                                 child: Image(image: NetworkImage('https://twitter.com/tedstew/photo'),),
                               ),
@@ -498,4 +499,6 @@ class _MyAppState extends State<MyApp> {
       ),
     );
   }
+
+  //this should be the last adjustment on this project unless there is a solution to the null getter issue
 }
