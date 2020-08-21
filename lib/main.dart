@@ -3,11 +3,11 @@ import 'dart:ui';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:humanitarian_icons/humanitarian_icons.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:profilepage_doc_app/tim_icons_icons.dart';
 import 'package:material_design_icons_flutter/icon_map.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,18 +19,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-var _bottomNavIndex = 0;
+  int currentPage = 0;
 
-AnimationController _animationController;
-Animation<double> animation;
-CurvedAnimation curve;
+  GlobalKey bottomNavigationKey = GlobalKey();
 
-  final iconList = <IconData>[
-    Icons.brightness_1,
-    Icons.brightness_3,
-    Icons.brightness_5,
-    Icons.brightness_7,
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -486,20 +478,23 @@ CurvedAnimation curve;
             ),
           ),
         ),
-        floatingActionButton: FloatingActionButton( onPressed: () {},
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        bottomNavigationBar: AnimatedBottomNavigationBar(
-          icons: iconList,
-          activeIndex: _bottomNavIndex,
-          gapLocation: GapLocation.center,
-          notchSmoothness: NotchSmoothness.verySmoothEdge,
-          notchAndCornersAnimation: animation,
-          splashSpeedInMilliseconds: 300,
-          leftCornerRadius: 32,
-          rightCornerRadius: 32,
-          onTap: (index) => setState(() => _bottomNavIndex = index),
-        ),
+          bottomNavigationBar: FancyBottomNavigation(
+            activeIconColor: Colors.white,
+            circleColor: Color.fromRGBO(255, 138, 0, 1),
+            inactiveIconColor: Color.fromRGBO(0, 0, 0, 1),
+            tabs: [
+              TabData(iconData: MdiIcons.calendar,  title: "", ),
+              TabData(iconData: MdiIcons.circleOutline , title: ""),
+              TabData(iconData: MdiIcons.alarm, title: ""),
+              TabData(iconData: CupertinoIcons.person_solid, title: ""),
+
+            ],
+            onTabChangedListener: (position) {
+              setState(() {
+                currentPage = position;
+              });
+            },
+          )
       ),
     );
   }
